@@ -1,0 +1,98 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  basicTimeStep 64
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.5035720633404127 0.7081884166859952 0.4948579023263774 4.4682374832091805
+  position -0.4185192121113905 0.7311909405469366 0.2828569759189986
+  follow "TurtleBot3Burger"
+  followType "Pan and Tilt Shot"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+CircleArena {
+  radius 3
+  wallHeight 0.4
+}
+WoodenBox {
+  translation 0.467367 0.15 0.545426
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 1.26618 0.15 -1.07342
+  name "wooden box(1)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation -0.15697 0.15 -0.782967
+  name "wooden box(2)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation -1.62271 0.15 -1.08968
+  name "wooden box(3)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation -1.09887 0.15 0.301011
+  name "wooden box(4)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation -2.71307 0.15 0.22263
+  name "wooden box(7)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation -0.744103 0.15 -2.69736
+  name "wooden box(8)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 2.30103 0.15 -0.203241
+  name "wooden box(9)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 0.005323 0.15 1.57959
+  name "wooden box(5)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation -1.0974 0.15 1.8598
+  name "wooden box(6)"
+  size 0.3 0.3 0.3
+}
+TurtleBot3Burger {
+  translation -0.19 -0.01 0.22
+  controller "my_controller_5_sensors"
+  extensionSlot [
+    SharpGP2D120 {
+      translation -0.00999999 0 0.05
+      rotation 0 1 0 -1.5707953071795862
+    }
+    SharpGP2D120 {
+      translation -0.06 0 -0.03
+      rotation 0 1 0 3.14159
+      name "Sharp's IR sensor GP2D120 Left"
+    }
+    SharpGP2D120 {
+      translation -0.0400004 0 -0.04
+      rotation 0 1 0 1.5708
+      name "Sharp's IR sensor GP2D120 FrontLeft"
+    }
+    SharpGP2D120 {
+      translation 0.06 0 -0.04
+      rotation 0 1 0 1.5708
+      name "Sharp's IR sensor GP2D120 FrontRight"
+    }
+    SharpGP2D120 {
+      translation 0.0700004 0 -0.029999
+      rotation 0 1 0 -5.307179586466759e-06
+      name "Sharp's IR sensor GP2D120 Right"
+    }
+  ]
+}
