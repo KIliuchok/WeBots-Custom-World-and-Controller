@@ -16,7 +16,7 @@ TIME_STEP = int(robot.getBasicTimeStep())
 sensors = []
 speed = [0,0]
 
-weights = [ [-0.3, -0.4], [-0.3,-0.4], [-0.5, 0.5], [0.1, 0.1], [0.5, -0.5]]
+weights = [ [-0.3, -0.4], [-0.4,-0.3], [-0.5, 0.5], [0.1, 0.1], [0.5, -0.5]]
 
 sensors.append(robot.getDevice("Sharp's IR sensor GP2D120 FrontLeft"))
 sensors.append(robot.getDevice("Sharp's IR sensor GP2D120 FrontRight"))
@@ -53,7 +53,7 @@ def braitenberg():
     while (i < 2):
         speed[i] = 0.0
         while (j < 5):
-            if (sensorDataMeters[j] > 1.5):
+            if (sensorDataMeters[j] > 2):
                 j += 1
                 continue
             speed[i] += sensorDataMeters[j] * weights[j][i]
@@ -72,8 +72,8 @@ def setActuators():
     rightMotor.setVelocity(float(speed[1]))
 
     
-enableSpeedControl(leftMotor, 0.0)
-enableSpeedControl(rightMotor, 0.0)
+enableSpeedControl(leftMotor, BASE_SPEED)
+enableSpeedControl(rightMotor, BASE_SPEED)
 
 x = symbols('x')
 
@@ -87,10 +87,8 @@ x = symbols('x')
 # - perform simulation steps until Webots is stopping the controller
 while robot.step(TIME_STEP) != -1:
     
-    
-
-    enableSpeedControl(leftMotor, 0.0)
-    enableSpeedControl(rightMotor, 0.0)
+    enableSpeedControl(leftMotor, BASE_SPEED)
+    enableSpeedControl(rightMotor, BASE_SPEED)
 
     sensorDataMeters = getSensorData()
     print("FrontLeft: " + str(sensorDataMeters[0]))

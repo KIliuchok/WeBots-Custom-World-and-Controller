@@ -4,8 +4,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.5035720633404127 0.7081884166859952 0.4948579023263774 4.4682374832091805
-  position -0.4185192121113905 0.7311909405469366 0.2828569759189986
+  orientation 0.4920199332980385 0.7139201864321074 0.49823122407386194 4.446905302034253
+  position -0.6198202231197416 1.2111096448021452 0.3082532945875558
   follow "TurtleBot3Burger"
   followType "Pan and Tilt Shot"
 }
@@ -70,8 +70,12 @@ TurtleBot3Burger {
   translation -0.19 -0.01 0.22
   controller "my_controller_5_sensors"
   extensionSlot [
+    DistanceSensor {
+      translation -1.46928e-07 0 -0.04
+      rotation 0 1 0 1.5708
+    }
     SharpGP2D120 {
-      translation -0.00999999 0 0.05
+      translation 9.99999e-09 0 0.05
       rotation 0 1 0 -1.5707953071795862
     }
     SharpGP2D120 {
@@ -95,4 +99,7 @@ TurtleBot3Burger {
       name "Sharp's IR sensor GP2D120 Right"
     }
   ]
+}
+Pedestrian {
+  translation -0.76 1.27 -1.05
 }
