@@ -16,7 +16,7 @@ TIME_STEP = int(robot.getBasicTimeStep())
 sensors = []
 speed = [0,0]
 
-weights = [ [-0.3, -0.4], [-0.4,-0.3], [-0.5, 0.5], [0.1, 0.1], [0.5, -0.5]]
+weights = [ [-0.3, -0.4], [-0.3,-0.4], [-0.5, 0.5], [0.1, 0.1], [0.5, -0.5]]
 
 sensors.append(robot.getDevice("Sharp's IR sensor GP2D120 FrontLeft"))
 sensors.append(robot.getDevice("Sharp's IR sensor GP2D120 FrontRight"))
