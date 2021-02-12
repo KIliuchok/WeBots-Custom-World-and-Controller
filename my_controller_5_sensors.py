@@ -53,7 +53,7 @@ def braitenberg():
     while (i < 2):
         speed[i] = 0.0
         while (j < 5):
-            if (sensorDataMeters[j] > 1.5):
+            if (sensorDataMeters[j] > 2):
                 j += 1
                 continue
             speed[i] += sensorDataMeters[j] * weights[j][i]
@@ -87,10 +87,8 @@ x = symbols('x')
 # - perform simulation steps until Webots is stopping the controller
 while robot.step(TIME_STEP) != -1:
     
-    
-
-    enableSpeedControl(leftMotor, 0.0)
-    enableSpeedControl(rightMotor, 0.0)
+    enableSpeedControl(leftMotor, BASE_SPEED)
+    enableSpeedControl(rightMotor, BASE_SPEED)
 
     sensorDataMeters = getSensorData()
     print("FrontLeft: " + str(sensorDataMeters[0]))
