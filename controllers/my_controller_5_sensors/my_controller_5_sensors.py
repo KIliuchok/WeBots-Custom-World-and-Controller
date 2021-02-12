@@ -72,8 +72,8 @@ def setActuators():
     rightMotor.setVelocity(float(speed[1]))
 
     
-enableSpeedControl(leftMotor, BASE_SPEED)
-enableSpeedControl(rightMotor, BASE_SPEED)
+enableSpeedControl(leftMotor, 0.0)
+enableSpeedControl(rightMotor, 0.0)
 
 x = symbols('x')
 
